@@ -3,7 +3,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: url("plan.jpg") no-repeat center center fixed;
+    background: url("plan.jpeg") no-repeat center center fixed;
     background-size: cover;
     color: white;
 }
