@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Réservation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="Marrakech.html"><span>Marrakech</span> Tourisme</a></div>
+        <ul class="menu">
+            <li><a href="Marrakech.html">Accueil</a></li>
+            <li><a href="patrimoine.html">Patrimoine</a></li>
+            <li><a href="reservation.html">Réservation</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+        </ul>
+    </header>
+    <section id="reservation">
+        <h1 class="title">Réserver un hôtel</h1>
+        <form>
+            <label>Nom : <input type="text" required></label>
+            <label>Prénom : <input type="text" required></label>
+            <label>Date d'arrivée : <input type="date" required></label>
+            <label>Date de départ : <input type="date" required></label>
+            <label>Type de chambre :
+        <select>
+          <option>Simple</option>
+          <option>Double</option>
+          <option>Suite</option>
+        </select>
+      </label>
+            <label>Préférences : <textarea></textarea></label>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    <script>
+        var toggle_menu = document.querySelector('.responsive-menu');
+        var menu = document.querySelector('.menu');
+        toggle_menu.onclick = function() {
+            toggle_menu.classList.toggle('active');
+            menu.classList.toggle('responsive')
+        }
+    </script>
+
+</body>
+
+</html>

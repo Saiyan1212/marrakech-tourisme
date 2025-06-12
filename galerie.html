@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Galerie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="Marrakech.html"><span>Marrakech</span> Tourisme</a></div>
+        <ul class="menu">
+            <li><a href="Marrakech.html">Accueil</a></li>
+            <li><a href="patrimoine.html">Patrimoine</a></li>
+            <li><a href="reservation.html">Réservation</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+        </ul>
+    </header>
+    <section id="galerie">
+        <h1 class="title">Galerie de Marrakech</h1>
+        <div class="img-grid">
+            <div class="orbit-container">
+                <div class="orbiter">
+                    <a href="galerie1.html"><img src="images/palmeraie.jpeg" alt="Palmeraie"></a>
+                </div>
+                <div class="orbiter delay1"></div>
+                <a href="galerie0.html"><img src="images/cyberparc.jpg" alt="Cyber Parc"></a>
+            </div>
+            <a href="galerie2.html"><img src="images/riad.jpg" alt="Riad"></a>
+            <a href="galerie3.html"> <img src="images/palais-bahia.jpg" alt="Palais Bahia"></a>
+            <a href="galerie4.html"><img src="images/jemaa.jpg" alt="Jemaa El Fna"></a>
+            <a href="galerie5.html"><img src="images/agafay.jpg" alt="Agafay"></a>
+        </div>
+        </div>
+    </section>
+    <style>
+        body {
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .orbit-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            animation: spin 10s linear infinite;
+        }
+        
+        .orbiter {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: orbit 10s linear infinite;
+        }
+        
+        .orbiter img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 10px white;
+        }
+        /* Des décalages pour que les images ne se superposent pas */
+        
+        .delay1 {
+            animation-delay: 3.3s;
+        }
+        
+        .delay2 {
+            animation-delay: 6.6s;
+        }
+        
+        @keyframes orbit {
+            0% {
+                transform: rotate(0deg) translateX(150px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translateX(150px) rotate(-360deg);
+            }
+        }
+    </style>
+</body>
+
+</html>

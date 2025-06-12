@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Patrimoine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+
+</header>
+
+<body>
+    <header>
+        <div class="logo"><a href="Marrakech.html"><span>Marrakech</span> Tourisme</a></div>
+        <ul class="menu">
+            <li><a href="Marrakech.html">Accueil</a></li>
+            <li><a href="patrimoine.html">Patrimoine</a></li>
+            <li><a href="reservation.html">Réservation</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+        </ul>
+    </header>
+    <section id="patrimoine">
+        <h1 class="title">Sites Patrimoniaux</h1>
+        <div class="img-grid">
+            <div class="box">
+                <img src="images/Koutoubia.jpg" alt="Koutoubia">
+                <h2>Mosquée Koutoubia</h2>
+                <div class="content">
+                    <div>
+                        <h4>Koutoubia</h4>
+                        <p>La Koutoubia est un minaret de la mosquée Koutoubia, inspiré de la Giralda de Séville.</p>
+                        <a href="site1.html">
+                            <h1>Lire plus</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .box {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 32px;
+                    a {
+                        background-image: url("images/Koutoubia.jpg");
+                        background-size: cover;
+                        background-position: center;
+                        height: 600px;
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+                    h2 {}
+                    ;
+                    color: #b9c7c7;
+                    font-size: 14px;
+                    padding: 8px 25px;
+                    font-weight: bold;
+                }
+            </style>
+
+            <a href="site2.html"><img src="images/menara.jpg" alt="Menara"></a>
+            <a href="site3.html"><img src="images/majorelle.jpg" alt="Majorelle"></a>
+            <a href="site4.html"><img src="images/saadiens.jpg" alt="Saadiens"></a>
+            <a href="site5.html"><img src="images/musee-marrakech.jpg" alt="Musée"></a>
+            <a href="site6.html"><img src="images/medersa-ben-youssef.webp" alt="Medersa"></a>
+        </div>
+    </section>
+</body>
+
+</html>
