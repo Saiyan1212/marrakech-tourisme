@@ -19,21 +19,23 @@
     </header>
     <section id="reservation">
         <h1 class="title">Réserver un hôtel</h1>
-        <form>
-            <label>Nom : <input type="text" required></label>
-            <label>Prénom : <input type="text" required></label>
-            <label>Date d'arrivée : <input type="date" required></label>
-            <label>Date de départ : <input type="date" required></label>
+        <form action="reservation.php" method="POST">
+            <label>Nom : <input type="text" name="nom" required></label>
+            <label>Prénom : <input type="text" name="prenom" required></label>
+            <label>Date d'arrivée : <input type="date" name="arrivee" required></label>
+            <label>Date de départ : <input type="date" name="depart" required></label>
             <label>Type de chambre :
-        <select>
-          <option>Simple</option>
-          <option>Double</option>
-          <option>Suite</option>
+        <select name="chambre">
+            <option>Simple</option>
+            <option>Double</option>
+            <option>Suite</option>
         </select>
-      </label>
-            <label>Préférences : <textarea></textarea></label>
+    </label>
+            <label>Préférences : <textarea name="preferences"></textarea></label>
             <button type="submit">Envoyer</button>
         </form>
+
+
     </section>
     <script>
         var toggle_menu = document.querySelector('.responsive-menu');
@@ -46,6 +48,26 @@
     <footer>
         <p>Réalisé par <span>BEOGO Aïda & GNOUMOU Salvador</span> | Tous droits réservés.</p>
     </footer>
+    <script>
+        document.getElementById('formReservation').addEventListener('submit', function(event) {
+            const nom = document.getElementById('nom').value.trim();
+            const prenom = document.getElementById('prenom').value.trim();
+            const arrivee = new Date(document.getElementById('arrivee').value);
+            const depart = new Date(document.getElementById('depart').value);
+
+            if (!nom || !prenom) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                event.preventDefault();
+                return;
+            }
+
+            if (arrivee >= depart) {
+                alert("La date d'arrivée doit être antérieure à la date de départ.");
+                event.preventDefault();
+            }
+        });
+    </script>
+
 </body>
 
 </html>
