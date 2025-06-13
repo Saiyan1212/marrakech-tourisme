@@ -80,8 +80,8 @@
     <style>
         .box {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(auto, minmax(100px, 1fr));
+            gap: auto;
             a {
                 background-image: url("Koutoubia.jpg");
                 background-size: cover;
@@ -99,6 +99,49 @@
             font-size: 14px;
             padding: 8px 25px;
             font-weight: bold;
+        }
+        
+        .box .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+            text-align: center;
+            align-items: center;
+            transform: translateX(100%);
+            transition: 0.5s;
+        }
+        
+        .box .content h4 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        
+        .box .content p {
+            padding: 2px;
+            font-size: 12px;
+        }
+        
+        .box .content p:nth-child(3) {
+            margin-bottom: 25px;
+        }
+        
+        .box .content a {
+            margin-top: 60px;
+            padding: 10px 60px;
+            border: 2px solid #29d9d5;
+            color: #29d9d5;
+            font-weight: bold;
+        }
+        
+        .box:hover {
+            box-shadow: 0 0 10px #29d9d5;
+        }
+        
+        .box:hover .content {
+            transform: translateX(0);
         }
     </style>
 </body>
